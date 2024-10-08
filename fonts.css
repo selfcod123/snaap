@@ -1,0 +1,66 @@
+/* fonts.css */
+@font-face {
+    font-family: "Vazir";
+    src: url('../media/Vazir-Bold.eot');
+    src: url('../media/Vazir-Bold.eot') format("embedded-opentype"),
+         url('../media/Vazir-Bold.woff2') format("woff2"),
+         url('../media/Vazir-Bold.woff') format("woff"),
+         url('../media/Vazir-Bold.ttf') format("truetype");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Vazir";
+    src: url('../media/Vazir.eot');
+    src: url('../media/Vazir.eot') format("embedded-opentype"),
+         url('../media/Vazir.woff2') format("woff2"),
+         url('../media/Vazir.woff') format("woff"),
+         url('../media/Vazir.ttf') format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Vazir";
+    src: url('../media/Vazir-Black.eot');
+    src: url('../media/Vazir-Black.eot') format("embedded-opentype"),
+         url('../media/Vazir-Black.woff2') format("woff2"),
+         url('../media/Vazir-Black.woff') format("woff"),
+         url('../media/Vazir-Black.ttf') format("truetype");
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Vazir";
+    src: url('../media/Vazir-Medium.eot');
+    src: url('../media/Vazir-Medium.eot') format("embedded-opentype"),
+         url('../media/Vazir-Medium.woff2') format("woff2"),
+         url('../media/Vazir-Medium.woff') format("woff"),
+         url('../media/Vazir-Medium.ttf') format("truetype");
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Vazir";
+    src: url('../media/Vazir-Light.eot');
+    src: url('../media/Vazir-Light.eot') format("embedded-opentype"),
+         url('../media/Vazir-Light.woff2') format("woff2"),
+         url('../media/Vazir-Light.woff') format("woff"),
+         url('../media/Vazir-Light.ttf') format("truetype");
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Vazir";
+    src: url('../media/Vazir-Thin.eot');
+    src: url('../media/Vazir-Thin.eot') format("embedded-opentype"),
+         url('../media/Vazir-Thin.woff2') format("woff2"),
+         url('../media/Vazir-Thin.woff') format("woff"),
+         url('../media/Vazir-Thin.ttf') format("truetype");
+    font-weight: 100;
+    font-style: normal;
+}
