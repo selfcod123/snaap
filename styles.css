@@ -23,6 +23,8 @@ background-color:#fff ;
     margin: auto;
     /* صد درصد قرار میدهیم تا از کناره صفحه فاصله بگیرد و حدودی وسط بیوفتد */
     width: 100%;
+    padding-left: 12%;
+    padding-right:12%;
 
 }
 
