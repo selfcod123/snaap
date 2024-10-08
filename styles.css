@@ -5,8 +5,11 @@ html{
     font-family: "Vazir",sans-serif;
 }
 body{
-background-color: red;
+background-color:#fff ;
 }
+
+/*Navbar-------Section*/
+
 .navbar{
     background-color: #fff;
     height: 5rem;
@@ -35,3 +38,23 @@ background-color: red;
         margin-right: 2.2rem;/*برای فاصله افتادن بین نوشته ها*/
         font-weight:lighter;
     }
+
+    /*Hero-------Section*/
+
+    .hero__section{
+        display: flex;/*به صورت سطری در میآید*/
+    }
+.hero__section__intro{
+    background-color: #21aa58;
+    color: #fff;
+    width: 50%;/*50درصد صفحه رو به خودش اختصاص بدهد*/
+}
+.hero__section__pic{
+    /*در اینجا به جای تگ ایمیج درفایل ایندکس از پراپرتی بکگراند استفاده میکنیم*/
+    background-image: url(https://web-cdn.snapp.ir/snapp-website/images/homepage/intro_desktop.jpg);
+    min-height: 40vh;
+    width: 50%;/*50درصد صفحه رو به خودش اختصاص بدهد*/
+    background-position: center center;/*برای وسط انداختن تصویر در محور x,y*/
+    background-size: cover;/*we put cover to cover the hole pic in the flex*/
+    transform: scaleX(-1);/*to reverse the pic*/
+}
