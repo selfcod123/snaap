@@ -6,45 +6,38 @@ html{
 }
 body{
 background-color:#fff ;
+width: 100%;
 }
 
-/*Navbar-------Section*/
 
-.navbar{
-    background-color: #fff;
-    height: 5rem;
-    display: flex;
-    border-bottom: 1px solid rgba(0, 0, 0, .2);/*یک کادر ریز بهش میدیم*/
-}
 
 /* Basic container styling */
+
 .container {
-    /* مارجین را آتو قرار میدهیم تا کلاس وسط صفحه قرار بگیرد */
-    margin-right: auto;
-    margin-left: auto;
-    padding: 0 15px;   /* Add padding */
-    /* صد درصد قرار میدهیم تا از کناره صفحه فاصله بگیرد و حدودی وسط بیوفتد */
+    max-width: auto ; /* Maximum width of the container */
     width: 100%;
-    padding-left: 12%;
-    padding-right: 12%;
+    margin: 0 auto; /* Centering the container */
+    padding-left: 15px;
+    padding-right: 15px;
 
 }
+
 
 /* Media Queries */
 @media (max-width: 1600px) {
     .container {
-        max-width: 1640%; /* Reduce max-width for smaller screens */
+        max-width: 1640px; /* Reduce max-width for smaller screens */
     }
 }
 
 @media (max-width: 1400px) {
     .container {
-        max-width: 1440%; /* Reduce max-width for smaller screens */
+        max-width: 1440px; /* Reduce max-width for smaller screens */
     }
 }
 @media (max-width: 1200px) {
     .container {
-        max-width: 1140%; /* Reduce max-width for smaller screens */
+        max-width: 1140px; /* Reduce max-width for smaller screens */
     }
 }
 
@@ -61,7 +54,15 @@ background-color:#fff ;
     }
 }
 
+/*Navbar-------Section*/
 
+.navbar{
+    background-color: #fff;
+    height: 5rem;
+    padding: 0 10rem;
+    display: flex;
+    border-bottom: 1px solid rgba(0, 0, 0, .2);/*یک کادر ریز بهش میدیم*/
+}
 
 .navbar__section{
     display: flex;
@@ -105,12 +106,12 @@ background-color:#fff ;
 }
 .hero__section__pic{
     /*در اینجا به جای تگ ایمیج درفایل ایندکس از پراپرتی بکگراند استفاده میکنیم*/
-    background-image: url(https://web-cdn.snapp.ir/snapp-website/images/homepage/intro_desktop.jpg);
+    background-image: url(./media/images/Screenshot\ 2024-10-09\ at\ 10-24-21\ سوپر\ اپلیکیشن\ اسنپ\ سامانه\ هوشمند\ حمل‌ونقل\ تاکسی\ اینترنتی.png);
     min-height: 40vh;
     width: 50%;/*50درصد صفحه رو به خودش اختصاص بدهد*/
     background-position: center center;/*برای وسط انداختن تصویر در محور x,y*/
     background-size: cover;/*we put cover to cover the hole pic in the flex*/
-    transform: scaleX(-1);/*to reverse the pic*/
+   /* transform: scaleX(-1);*/   /*to reverse the pic*/
     flex: 0 0 50%;/*چون در پایین تعریف کردیم پس برای تصویر هم تعریف میکنیم*/
 }
 
@@ -186,4 +187,70 @@ background-color:#fff ;
 }
 .hero__section_gotowebapp:hover{
     background-color: rgba(255, 255, 255, 0.1);
+}
+
+/*LIST APPLICATION ------------section*/
+
+.snapp-apps{
+    display: grid;
+    grid-template-columns: auto auto  auto auto auto;
+
+    align-items: center;
+    min-height: 30vh;
+    padding: 0 10%;
+    justify-content: space-around;
+
+    content-visibility: auto;/*to incrase the quility of pics*/
+}
+
+/*APPS---------SECTION*/
+
+.intro-of-snapp-apps{/*father tag for items(div-1 tag) & title (h2 tag) */
+    background-color:#275e96;
+    margin-bottom: 2.5rem;
+    display: grid;
+    width: auto;
+}
+.intro-of-snapp-apps-title{/*h2 tag*/
+    font-size: 2.25rem;
+    font-weight: 700;
+    line-height: 3.25rem;
+    padding: 2.5rem 0;
+    color: #333;
+    text-align: center;
+}
+.intro-of-snapp-apps-items{/*div-1 زمینه را برای تعریف تصاویر و متن ها وابعادشان آماده میکنیم*/
+    display: grid;
+    grid-template-columns:repeat(3 ,1fr);
+    gap: 2rem;
+    padding: 0 10rem;
+}
+.intro-of-snapp-apps-items > a{/*main tag for A,B,C,D*/
+    text-decoration: none;/*to remove the line under text*/
+    color: inherit;
+}
+.intro-of-snapp-apps-item{/*A*/
+    background-color: white;
+    border-radius: 1.125rem;
+    display: flex;
+    align-items: center;
+    padding: .75rem;
+    margin: 1rem;
+}
+.intro-of-snapp-apps-itemsinfo{/*B*/
+    margin-right: .5rem;
+    padding: 1rem 0;
+}
+.intro-of-snapp-apps-itemsinfo h3{/*C*/
+    font-weight: bold;
+    margin-bottom: .5rem;
+}
+.intro-of-snapp-apps-itemsinfo p{/*D*/
+    font-size: 0.875rem;
+    color:#a3a3a3;
+    font-weight: 100;
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden;    /* Hide overflow */
+    text-overflow: ellipsis; /* Optional: Adds ellipsis for overflow text */
+
 }
