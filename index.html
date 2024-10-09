@@ -1,19 +1,24 @@
-    <!DOCTYPE html>
-    <html lang="en" dir="rtl">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="./reset.css">
-        <link rel="stylesheet" href="./styles.css">
-        <title>snapp</title>
-    </head>
-    <body>
-        <navbar class="navbar">
-            <div class="container">
-                <div class="navbar__section">
-            <div class="navbar__logo">
-                <img src="./media/images/logo.png" alt="snapp logo">
-            </div>
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./styles.css">
+    <title>snapp</title>
+</head>
+
+<body>
+
+    <!--*****NAVBAR  SECTION******-->
+
+    <navbar class="navbar">
+        <div class="container">
+            <div class="navbar__section">
+                <div class="navbar__logo">
+                    <img src="./media/images/logo.png" alt="snapp logo">
+                </div>
 
                 <ul class="navbar__links">
                     <li><span>سوپر اپ اسنپ</span></li>
@@ -23,264 +28,334 @@
                     <li><span>درباره اسنپ</span></li>
                 </ul>
             </div>
-            </div>
-        </navbar>
-            <div class="hero__section">
-                <div class="hero__section__intro">
-                    <h3 class="hero__section__intro_tagline">تجربه‌ی زندگی راحت‌تر، سریع‌تر و به‌صرفه‌تر با سوپراپلیکیشن اسنپ!</h3>
-                    <p class="hero__section__intro_description">از درخواست خودرو گرفته تا سفارش غذا، خرید سوپرمارکتی، خرید بلیط سفر، رزرو هتل و... را میتوانید با اسنپ انجام دهید.</p>
-                    <form action="" class="hero__section__intro_sendlink"><!--main tag for numberbox & dot & button1-->
-                        <div class="hero__section__intro_sendlink_input"><!--main tag for numberbox & dot-->
-                             <input type="text" placeholder="09xxxxx6789"><!--خود باکس شماره تلفن-->
-                             <div class="input__dot"></div><!--برای استایل دادن به نقطه درون باکس شماره تلفن-->
-                      </div>
-                          <button type="submit">ارسال لینک</button><!--button 1-->
-                    </form>
-                    <a href=""> <button type="submit" class="hero__section_gotowebapp">ورود به وب اپلیکیشن اسنپ</button><!--button 2-->
-                    </a>
+        </div>
+    </navbar>
+
+    <!--*****HERO  SECTION******-->
+
+    <div class="hero__section">
+        <div class="hero__section__intro">
+            <h3 class="hero__section__intro_tagline">تجربه‌ی زندگی راحت‌تر، سریع‌تر و به‌صرفه‌تر با سوپراپلیکیشن اسنپ!
+            </h3>
+            <p class="hero__section__intro_description">از درخواست خودرو گرفته تا سفارش غذا، خرید سوپرمارکتی، خرید بلیط
+                سفر، رزرو هتل و... را میتوانید با اسنپ انجام دهید.</p>
+            <form action="" class="hero__section__intro_sendlink"><!--main tag for numberbox & dot & button1-->
+                <div class="hero__section__intro_sendlink_input"><!--main tag for numberbox & dot-->
+                    <input type="text" placeholder="09xxxxx6789"><!--خود باکس شماره تلفن-->
+                    <div class="input__dot"></div><!--برای استایل دادن به نقطه درون باکس شماره تلفن-->
                 </div>
-                    <div class="hero__section__pic"></div>
+                <button type="submit">ارسال لینک</button><!--button 1-->
+            </form>
+            <a href=""> <button type="submit" class="hero__section_gotowebapp">ورود به وب اپلیکیشن
+                    اسنپ</button><!--button 2-->
+            </a>
+        </div>
+        <div class="hero__section__pic"></div>
+    </div>
+
+    <!--*****SNAPP APPS   SECTION******-->
+    <div>
+        <div class="container"><!--یک کلاس عرضی جدید ولی نمیتوانیم به این استایل بدهیم-->
+            <div class="snapp-apps">
+                <!--becuse the width of pics are similar we can style it with (width img property) in here(index.html)-->
+                <!--but if the widthes were diferent we shoud style each img width in style.css-->
+                <a href=""><img src="./media/images/direct-download-badge.png" alt="" width="160"></a>
+                <a href=""><img src="./media/images/myketmarket.png" alt="" width="160"></a>
+                <a href=""><img src="./media/images/app_store.svg" alt="" width="160"></a>
+                <a href=""><img src="./media/images/snapp-pwa.png" alt="" width="160"></a>
+                <a href=""><img src="./media/images/bazaar.png" alt="" width="160"></a>
             </div>
-            <div class="container"><!--یک کلاس عرضی جدید ولی نمیتوانیم به این استایل بدهیم-->
-                <div class="snapp-apps">
-                    <!--becuse the width of pics are similar we can style it with (width img property) in here(index.html)-->
-                    <!--but if the widthes were diferent we shoud style each img width in style.css-->
-                    <a href=""><img src="./media/images/direct-download-badge.png" alt="" width="160"></a>
-                    <a href=""><img src="./media/images/myketmarket.png" alt="" width="160"></a>
-                    <a href=""><img src="./media/images/app_store.svg" alt="" width="160"></a>
-                    <a href=""><img src="./media/images/snapp-pwa.png" alt="" width="160"></a>
-                    <a href=""><img src="./media/images/bazaar.png" alt="" width="160"></a>
-                </div>
-             </div>
+        </div>
+    </div>
+    <!--*****INTRO APPS  SECTION******-->
 
-             <div class="intro-of-snapp-apps">
-                <div class="container">
+    <div class="intro-of-snapp-apps">
+        <div class="container">
 
-                    <h2 class="intro-of-snapp-apps-title"><span>یک اپلیکیشن، برای تمام نیازها</span></h2>
-                    <div class="intro-of-snapp-apps-items"><!--div-1-->
+            <h2 class="intro-of-snapp-apps-title"><span>یک اپلیکیشن، برای تمام نیازها</span></h2>
+            <div class="intro-of-snapp-apps-items"><!--div-1-->
 
-                        <a href="https://snapp.ir/taxi-ride/">
-                            <div class="intro-of-snapp-apps-item">
-                                 <img src="./media/images/intro app/taxi.svg" alt="" width="62" height="62" >
-                                <div class="intro-of-snapp-apps-itemsinfo">
-                                    <h3>تاکسی اینترنتی</h3>
-                                    <p>امکان درخواست آنلاین خودرو بااسنپ</p>
-                                </div>
-                             </div>
-                        </a>
-                        <a href="https://snapp.ir/bike-delivery/">
-                            <div class="intro-of-snapp-apps-item">
-                                <img src="./media/images/intro app/bike.svg" alt="" width="62" height="62" >
-                               <div class="intro-of-snapp-apps-itemsinfo">
-                                 <h3>پیک موتوری</h3>
-                                  <p>حمل و نقل با اسنپ</p>
-                                </div>
-                              </div>
-                        </a>
-                        <a href="https://snapp.ir/online-supermarket-grocery/">
-                            <div class="intro-of-snapp-apps-item">
-                                <img  src="./media/images/intro app/spdiscount.png" alt="" width="62" height="62" >
-                               <div class="intro-of-snapp-apps-itemsinfo">
-                                    <h3>سوپرمارکت آنلاین</h3>
-                                    <p>تهیه اقلام روزانه با اسنپ</p>
-                                </div>
-                              </div>
-                        </a>
-                        <a href="https://snapp.ir/online-food-delivery/">
-                            <div class="intro-of-snapp-apps-item">
-                                <img  src="./media/images/intro app/food.svg" alt="" width="62" height="62" >
-                               <div class="intro-of-snapp-apps-itemsinfo">
-                                <h3>سفارش آنلاین غذا</h3>
-                                <p>سفارش غذا،نان وشیرینی با اسنپ</p>
-                                </div>
-                              </div>
-                        </a>
-                        <a href="https://snapp.ir/pickup-truck/">
-                            <div class="intro-of-snapp-apps-item">
-                                <img  src="./media/images/intro app/وانت.svg" alt="" width="62" height="62" >
-                               <div class="intro-of-snapp-apps-itemsinfo">
-                                <h3>درخواست وانت</h3>
-                                <p>حمل و نقل با اسنپ</p>
-                                </div>
-                              </div>
-                        </a>
-                        <a href="https://snapp.ir/express/">
-                            <div class="intro-of-snapp-apps-item">
-                                <img  src="./media/images/intro app/اسنپ اسپرس.png" alt="" width="62" height="62" >
-                               <div class="intro-of-snapp-apps-itemsinfo">
-                                <h3>اسنپ اکسپرس</h3>
-                                <p>تحویل کمتر از 30 دقیقه</p>
-                                </div>
-                              </div>
-                        </a>
-                        <a href="https://snapp.ir/flights-ticket/">
-                            <div class="intro-of-snapp-apps-item">
-                                <img  src="./media/images/intro app/پرواز داخلی.png" alt="" width="62" height="62" >
-                               <div class="intro-of-snapp-apps-itemsinfo">
-                                <h3>بلیط پرواز داخلی</h3>
-                                <p>گردشگری با اسنپ</p>
-                                </div>
-                              </div>
-                        </a>
-                        <a href="https://snapp.ir/international-flight/">
-                            <div class="intro-of-snapp-apps-item">
-                                <img  src="./media/images/intro app/پرواز خارجی.svg" alt="" width="62" height="62" >
-                               <div class="intro-of-snapp-apps-itemsinfo">
-                                <h3>بلیط پرواز خارجی</h3>
-                                <p>گردشگری با اسنپ</p>
-                                </div>
-                              </div>
-                        </a>
-                        <a href="https://insurance.snapp.ir/">
-                            <div class="intro-of-snapp-apps-item">
-                                <img  src="./media/images/intro app/بیمه.png" alt="" width="62" height="62" >
-                               <div class="intro-of-snapp-apps-itemsinfo">
-                                <h3>بیمه</h3>
-                                <p>خرید آنلاین بیمه بااسنپ</p>
-                                </div>
-                              </div>
-                        </a>
-                        <a href="https://snapp.ir/hotels/">
-                            <div class="intro-of-snapp-apps-item">
-                                <img  src="./media/images/intro app/hotel.svg" alt="" width="62" height="62" >
-                               <div class="intro-of-snapp-apps-itemsinfo">
-                                <h3>رزرو هتل</h3>
-                                <p>گردشگری با اسنپ</p>
-                                </div>
-                              </div>
-                        </a>
-                        <a href="https://snapp.ir/lodgings/">
-                            <div class="intro-of-snapp-apps-item">
-                                <img  src="./media/images/intro app/hotel.svg" alt="" width="62" height="62" >
-                               <div class="intro-of-snapp-apps-itemsinfo">
-                                <h3>رزرو اقامتگاه</h3>
-                                <p>گردشگری با اسنپ</p>
-                                </div>
-                              </div>
-                        </a>
-                        <a href="https://snapp.ir/medical-services/">
-                            <div class="intro-of-snapp-apps-item">
-                                <img  src="./media/images/intro app/doctor.svg" alt="" width="62" height="62" >
-                               <div class="intro-of-snapp-apps-itemsinfo">
-                                <h3>پزشک و مشاور</h3>
-                                <p>درمان با اسنپ</p>
-                                </div>
-                              </div>
-                        </a>
-                        <a href="https://snapp.ir/bus-ticket/">
-                            <div class="intro-of-snapp-apps-item">
-                                <img  src="./media/images/intro app/bus.svg" alt="" width="62" height="62" >
-                               <div class="intro-of-snapp-apps-itemsinfo">
-                                <h3>بلیط اتوبوس</h3>
-                                <p>گردشگری با اسنپ</p>
-                                </div>
-                              </div>
-                        </a>
-                        <a href="https://snapp.ir/train-ticket/">
-                            <div class="intro-of-snapp-apps-item">
-                                <img  src="./media/images/intro app/train.svg" alt="" width="62" height="62" >
-                               <div class="intro-of-snapp-apps-itemsinfo">
-                                <h3>بلیط قطار </h3>
-                                <p>گردشگری با اسنپ</p>
-                                </div>
-                              </div>
-                        </a>
-                        <a href="https://snapp.doctor/store/?utm_source=landing&utm_medium=landing-button&utm_campaign=pharmacy">
-                            <div class="intro-of-snapp-apps-item">
-                                <img  src="./media/images/intro app/pharmacy.svg" alt="" width="62" height="62" >
-                               <div class="intro-of-snapp-apps-itemsinfo">
-                                <h3>داروخانه</h3>
-                                <p>داروخانه آنلاین اسنپ</p>
-                                </div>
-                              </div>
-                        </a>
-                        <a href="https://snapp.ir/moving-services/">
-                            <div class="intro-of-snapp-apps-item">
-                                <img  src="./media/images/intro app/اسبابکشی.svg" alt="" width="62" height="62" >
-                               <div class="intro-of-snapp-apps-itemsinfo">
-                                <h3>اسباب کشی منزل</h3>
-                                <p>حمل ونقل با اسنپ</p>
-                                </div>
-                              </div>
-                        </a>
-                        <a href="https://digitalsignup.snapp.ir/">
-                            <div class="intro-of-snapp-apps-item">
-                                <img  src="./media/images/intro app/ثبتنام راننده.svg" alt="" width="62" height="62" >
-                               <div class="intro-of-snapp-apps-itemsinfo">
-                                <h3>ثبتنام راننده</h3>
-                                <p>ثبتنام تاکسی اینترنتی اسنپ</p>
-                                </div>
-                              </div>
-                        </a>
-                        <a href="https://snapp.ir/shop/">
-                            <div class="intro-of-snapp-apps-item">
-                                <img  src="./media/images/intro app/shop.svg" alt="" width="62" height="62" >
-                               <div class="intro-of-snapp-apps-itemsinfo">
-                                <h3>فروشگاه</h3>
-                                <p>خرید از فروشگاه های معتبر شهر</p>
-                                </div>
-                              </div>
-                        </a>
-                        <a href="https://snapp.ir/investment-services/">
-                            <div class="intro-of-snapp-apps-item">
-                                <img  src="./media/images/intro app/investment.svg" alt="" width="62" height="62" >
-                               <div class="intro-of-snapp-apps-itemsinfo">
-                                <h3>سرمایه گذاری</h3>
-                                <p>خدمات غیر حضوری بورس و سرمایه گذاری</p>
-                                </div>
-                              </div>
-                        </a>
-                        <a href="https://snapp.ir/snapp-credit/">
-                            <div class="intro-of-snapp-apps-item">
-                                <img  src="./media/images/intro app/Credit.svg" alt="" width="62" height="62" >
-                               <div class="intro-of-snapp-apps-itemsinfo">
-                                <h3>سرویس اعتباری</h3>
-                                <p>پرداخت با اسنپ</p>
-                                </div>
-                              </div>
-                        </a>
-                        <a href="https://snapp.ir/club/">
-                            <div class="intro-of-snapp-apps-item">
-                                <img  src="./media/images/intro app/club.svg" alt="" width="62" height="62" >
-                               <div class="intro-of-snapp-apps-itemsinfo">
-                                <h3>اسنپ کلاب</h3>
-                                <p>باشگاه مشتریان اسنپ</p>
-                                </div>
-                              </div>
-                        </a>
-                        <a href="https://snapp.ir/wallet/charge/">
-                            <div class="intro-of-snapp-apps-item">
-                                <img  src="./media/images/intro app/خرید شارژ.png" alt="" width="62" height="62" >
-                               <div class="intro-of-snapp-apps-itemsinfo">
-                                <h3>خرید شارژ</h3>
-                                <p>خرید آنلاین شارژ از اسنپ</p>
-                                </div>
-                              </div>
-                        </a>
-                        <a href="https://snapp.ir/wallet/internet/">
-                            <div class="intro-of-snapp-apps-item">
-                                <img  src="./media/images/intro app/خرید بسته اینترنت.png" alt="" width="62" height="62" >
-                               <div class="intro-of-snapp-apps-itemsinfo">
-                                <h3>خرید بسته اینترنت</h3>
-                                <p>خرید آنلاین بسته اینترنت از اسنپ</p>
-                                </div>
-                              </div>
-                        </a>
-                        <a href="https://snapp.ir/pro/">
-                            <div class="intro-of-snapp-apps-item">
-                                <img  src="./media/images/intro app/Pro.png" alt="" width="62" height="62" >
-                               <div class="intro-of-snapp-apps-itemsinfo">
-                                <h3>اسنپ پرو</h3>
-                                <p>اشتراک حرفه ای اسنپ</p>
-                                </div>
-                              </div>
-                        </a>
-
-
+                <a href="https://snapp.ir/taxi-ride/">
+                    <div class="intro-of-snapp-apps-item">
+                        <img src="./media/images/intro app/taxi.svg" alt="" width="62" height="62">
+                        <div class="intro-of-snapp-apps-itemsinfo">
+                            <h3>تاکسی اینترنتی</h3>
+                            <p>امکان درخواست آنلاین خودرو بااسنپ</p>
+                        </div>
                     </div>
-                </div>
-             </div>
-             
+                </a>
+                <a href="https://snapp.ir/bike-delivery/">
+                    <div class="intro-of-snapp-apps-item">
+                        <img src="./media/images/intro app/bike.svg" alt="" width="62" height="62">
+                        <div class="intro-of-snapp-apps-itemsinfo">
+                            <h3>پیک موتوری</h3>
+                            <p>حمل و نقل با اسنپ</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://snapp.ir/online-supermarket-grocery/">
+                    <div class="intro-of-snapp-apps-item">
+                        <img src="./media/images/intro app/spdiscount.png" alt="" width="62" height="62">
+                        <div class="intro-of-snapp-apps-itemsinfo">
+                            <h3>سوپرمارکت آنلاین</h3>
+                            <p>تهیه اقلام روزانه با اسنپ</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://snapp.ir/online-food-delivery/">
+                    <div class="intro-of-snapp-apps-item">
+                        <img src="./media/images/intro app/food.svg" alt="" width="62" height="62">
+                        <div class="intro-of-snapp-apps-itemsinfo">
+                            <h3>سفارش آنلاین غذا</h3>
+                            <p>سفارش غذا،نان وشیرینی با اسنپ</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://snapp.ir/pickup-truck/">
+                    <div class="intro-of-snapp-apps-item">
+                        <img src="./media/images/intro app/وانت.svg" alt="" width="62" height="62">
+                        <div class="intro-of-snapp-apps-itemsinfo">
+                            <h3>درخواست وانت</h3>
+                            <p>حمل و نقل با اسنپ</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://snapp.ir/express/">
+                    <div class="intro-of-snapp-apps-item">
+                        <img src="./media/images/intro app/اسنپ اسپرس.png" alt="" width="62" height="62">
+                        <div class="intro-of-snapp-apps-itemsinfo">
+                            <h3>اسنپ اکسپرس</h3>
+                            <p>تحویل کمتر از 30 دقیقه</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://snapp.ir/flights-ticket/">
+                    <div class="intro-of-snapp-apps-item">
+                        <img src="./media/images/intro app/پرواز داخلی.png" alt="" width="62" height="62">
+                        <div class="intro-of-snapp-apps-itemsinfo">
+                            <h3>بلیط پرواز داخلی</h3>
+                            <p>گردشگری با اسنپ</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://snapp.ir/international-flight/">
+                    <div class="intro-of-snapp-apps-item">
+                        <img src="./media/images/intro app/پرواز خارجی.svg" alt="" width="62" height="62">
+                        <div class="intro-of-snapp-apps-itemsinfo">
+                            <h3>بلیط پرواز خارجی</h3>
+                            <p>گردشگری با اسنپ</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://insurance.snapp.ir/">
+                    <div class="intro-of-snapp-apps-item">
+                        <img src="./media/images/intro app/بیمه.png" alt="" width="62" height="62">
+                        <div class="intro-of-snapp-apps-itemsinfo">
+                            <h3>بیمه</h3>
+                            <p>خرید آنلاین بیمه بااسنپ</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://snapp.ir/hotels/">
+                    <div class="intro-of-snapp-apps-item">
+                        <img src="./media/images/intro app/hotel.svg" alt="" width="62" height="62">
+                        <div class="intro-of-snapp-apps-itemsinfo">
+                            <h3>رزرو هتل</h3>
+                            <p>گردشگری با اسنپ</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://snapp.ir/lodgings/">
+                    <div class="intro-of-snapp-apps-item">
+                        <img src="./media/images/intro app/hotel.svg" alt="" width="62" height="62">
+                        <div class="intro-of-snapp-apps-itemsinfo">
+                            <h3>رزرو اقامتگاه</h3>
+                            <p>گردشگری با اسنپ</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://snapp.ir/medical-services/">
+                    <div class="intro-of-snapp-apps-item">
+                        <img src="./media/images/intro app/doctor.svg" alt="" width="62" height="62">
+                        <div class="intro-of-snapp-apps-itemsinfo">
+                            <h3>پزشک و مشاور</h3>
+                            <p>درمان با اسنپ</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://snapp.ir/bus-ticket/">
+                    <div class="intro-of-snapp-apps-item">
+                        <img src="./media/images/intro app/bus.svg" alt="" width="62" height="62">
+                        <div class="intro-of-snapp-apps-itemsinfo">
+                            <h3>بلیط اتوبوس</h3>
+                            <p>گردشگری با اسنپ</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://snapp.ir/train-ticket/">
+                    <div class="intro-of-snapp-apps-item">
+                        <img src="./media/images/intro app/train.svg" alt="" width="62" height="62">
+                        <div class="intro-of-snapp-apps-itemsinfo">
+                            <h3>بلیط قطار </h3>
+                            <p>گردشگری با اسنپ</p>
+                        </div>
+                    </div>
+                </a>
+                <a
+                    href="https://snapp.doctor/store/?utm_source=landing&utm_medium=landing-button&utm_campaign=pharmacy">
+                    <div class="intro-of-snapp-apps-item">
+                        <img src="./media/images/intro app/pharmacy.svg" alt="" width="62" height="62">
+                        <div class="intro-of-snapp-apps-itemsinfo">
+                            <h3>داروخانه</h3>
+                            <p>داروخانه آنلاین اسنپ</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://snapp.ir/moving-services/">
+                    <div class="intro-of-snapp-apps-item">
+                        <img src="./media/images/intro app/اسبابکشی.svg" alt="" width="62" height="62">
+                        <div class="intro-of-snapp-apps-itemsinfo">
+                            <h3>اسباب کشی منزل</h3>
+                            <p>حمل ونقل با اسنپ</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://digitalsignup.snapp.ir/">
+                    <div class="intro-of-snapp-apps-item">
+                        <img src="./media/images/intro app/ثبتنام راننده.svg" alt="" width="62" height="62">
+                        <div class="intro-of-snapp-apps-itemsinfo">
+                            <h3>ثبتنام راننده</h3>
+                            <p>ثبتنام تاکسی اینترنتی اسنپ</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://snapp.ir/shop/">
+                    <div class="intro-of-snapp-apps-item">
+                        <img src="./media/images/intro app/shop.svg" alt="" width="62" height="62">
+                        <div class="intro-of-snapp-apps-itemsinfo">
+                            <h3>فروشگاه</h3>
+                            <p>خرید از فروشگاه های معتبر شهر</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://snapp.ir/investment-services/">
+                    <div class="intro-of-snapp-apps-item">
+                        <img src="./media/images/intro app/investment.svg" alt="" width="62" height="62">
+                        <div class="intro-of-snapp-apps-itemsinfo">
+                            <h3>سرمایه گذاری</h3>
+                            <p>خدمات غیر حضوری بورس و سرمایه گذاری</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://snapp.ir/snapp-credit/">
+                    <div class="intro-of-snapp-apps-item">
+                        <img src="./media/images/intro app/Credit.svg" alt="" width="62" height="62">
+                        <div class="intro-of-snapp-apps-itemsinfo">
+                            <h3>سرویس اعتباری</h3>
+                            <p>پرداخت با اسنپ</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://snapp.ir/club/">
+                    <div class="intro-of-snapp-apps-item">
+                        <img src="./media/images/intro app/club.svg" alt="" width="62" height="62">
+                        <div class="intro-of-snapp-apps-itemsinfo">
+                            <h3>اسنپ کلاب</h3>
+                            <p>باشگاه مشتریان اسنپ</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://snapp.ir/wallet/charge/">
+                    <div class="intro-of-snapp-apps-item">
+                        <img src="./media/images/intro app/خرید شارژ.png" alt="" width="62" height="62">
+                        <div class="intro-of-snapp-apps-itemsinfo">
+                            <h3>خرید شارژ</h3>
+                            <p>خرید آنلاین شارژ از اسنپ</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://snapp.ir/wallet/internet/">
+                    <div class="intro-of-snapp-apps-item">
+                        <img src="./media/images/intro app/خرید بسته اینترنت.png" alt="" width="62" height="62">
+                        <div class="intro-of-snapp-apps-itemsinfo">
+                            <h3>خرید بسته اینترنت</h3>
+                            <p>خرید آنلاین بسته اینترنت از اسنپ</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://snapp.ir/pro/">
+                    <div class="intro-of-snapp-apps-item">
+                        <img src="./media/images/intro app/Pro.png" alt="" width="62" height="62">
+                        <div class="intro-of-snapp-apps-itemsinfo">
+                            <h3>اسنپ پرو</h3>
+                            <p>اشتراک حرفه ای اسنپ</p>
+                        </div>
+                    </div>
+                </a>
 
-    </body>
-    </html>
+
+            </div>
+        </div>
+    </div>
+
+    <!--******NEEDS   SECTION*****-->
+
+    <div class="snapp-answer-needs">
+        <!--در اینجا اگر کلاس کانتینر اضافه کنیم نوشته هامون استیل نمیگیرن-->
+        <div class="snapp-answer-needs-pic"></div>
+        <div class="snapp-answer-needs-text">
+            <h3>سوپر اپ اسنپ؛ پاسخی به تمام نیازها</h3>
+            <p>اسنپ، اولین تاکسی اینترنتی ایران، بعد از پنج سال فعالیت در حوزه‌ی تردد شهری، به یک سوپر‌اپ با خدمات متنوع
+                تبدیل شد. سوپراپ اسنپ راه‌حلی جدید و ساده است که با استفاده از آن تنها با یک اپلیکیشن می‌توانید علاوه بر
+                درخواست خودرو، موتور و وانت از خدمات متعددی از جمله سفارش غذا، پزشک و مشاور آنلاین، خرید از سوپرمارکت‌ها
+                و فروشگاه‌ها، اسباب‌کشی، خرید بلیط (هواپیما، اتوبوس، قطار)، رزرو هتل، پرداخت قبض و خرید شارژ استفاده
+                کنید.</p>
+        </div>
+
+
+        <div class="snaap-benefits">
+            <div class="container">
+                <div class="snaap-benefits__items">
+
+                    <div class="snaap-benefits-item">
+                        <div class="snaap-benefits-item-cover"><!--برای بکگراند و تصاویر-->
+                            <img src="./media/images/210x190-easy.png" alt="" height="190">
+                        </div>
+                        <h3 class="snaap-benefits-item-title">آسان</h3>
+                        <p class="snaap-benefits-item-description">برای استفاده از هر کدام از خدمات سوپر‌اپ اسنپ کافی
+                            است وارد اپلیکیشن اسنپ شوید و روی آیکون مورد نظر بزنید.</p>
+                    </div>
+
+                    <div class="snaap-benefits-item">
+                        <div class="snaap-benefits-item-cover"><!--برای بکگراند و تصاویر-->
+                            <img src="./media/images/210x190-fast.png" alt="" height="190">
+                        </div>
+
+                        <h3 class="snaap-benefits-item-title">سریع</h3>
+                        <p class="snaap-benefits-item-description">قرار گرفتن خدمات مختلف در یک پلت‌فرم به صرفه‌جویی در
+                            زمان کمک می‌کند. سوپراپ اسنپ پاسخی سریع به نیازهای رومزه‌ی شماست.</p>
+                    </div>
+
+                    <div class="snaap-benefits-item">
+                        <div class="snaap-benefits-item-cover"><!--برای بکگراند و تصاویر-->
+                            <img src="./media/images/210x190-eco.png" alt="" height="190">
+                        </div>
+
+                        <h3 class="snaap-benefits-item-title">به صرفه</h3>
+                        <p class="snaap-benefits-item-description">سوپراپ اسنپ علاوه بر زمان در هزینه‌های شما نیز
+                            صرفه‌جویی می‌کند تا بهترین خدمات را با قیمتی منطقی دریافت کنید.</p>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+</body>
+
+</html>

@@ -3,6 +3,11 @@
 html{
     font-size: 16px;
     font-family: "Vazir",sans-serif;
+
+}
+
+p{
+    font-weight: 300;
 }
 body{
 background-color:#fff ;
@@ -11,19 +16,19 @@ width: 100%;
 
 
 
-/* Basic container styling */
+/*--------------------------------- Basic container styling --------------------------------------*/
 
 .container {
     max-width: auto ; /* Maximum width of the container */
     width: 100%;
     margin: 0 auto; /* Centering the container */
-    padding-left: 15px;
-    padding-right: 15px;
+    /* padding-left: 15px;
+    padding-right: 15px; */
 
 }
 
 
-/* Media Queries */
+/* ----------------------------------Media Queries -----------------------------------------*/
 @media (max-width: 1600px) {
     .container {
         max-width: 1640px; /* Reduce max-width for smaller screens */
@@ -54,7 +59,7 @@ width: 100%;
     }
 }
 
-/*Navbar-------Section*/
+/*-------------------Navbar   Section-----------------------*/
 
 .navbar{
     background-color: #fff;
@@ -77,7 +82,7 @@ width: 100%;
         font-weight:lighter;
     }
 
-    /*Hero-------Section*/
+    /*-----------------Hero Section  part 1 ----------------------*/
 
     .hero__section{
         display: flex;/*به صورت سطری در میآید*/
@@ -115,7 +120,7 @@ width: 100%;
     flex: 0 0 50%;/*چون در پایین تعریف کردیم پس برای تصویر هم تعریف میکنیم*/
 }
 
-/*Hero Section--------PHONE BOX & Buttons*/
+/*------------------------------Hero Section   part 2    PHONE BOX & Buttons-------------------------------*/
 
 .hero__section__intro_sendlink{/*main tag (father)-main tag for numberbox & dot & button1*/
     display: flex;/*i put display in flex so ican style all the elements inside the main tag together*/
@@ -189,7 +194,7 @@ width: 100%;
     background-color: rgba(255, 255, 255, 0.1);
 }
 
-/*LIST APPLICATION ------------section*/
+/*------------------LIST APPLICATION  Section----------------------*/
 
 .snapp-apps{
     display: grid;
@@ -203,7 +208,7 @@ width: 100%;
     content-visibility: auto;/*to incrase the quility of pics*/
 }
 
-/*APPS---------SECTION*/
+/*---------------APPS  SECTION-------------------*/
 
 .intro-of-snapp-apps{/*father tag for items(div-1 tag) & title (h2 tag) */
     background-color:#275e96;
@@ -253,4 +258,73 @@ width: 100%;
     overflow: hidden;    /* Hide overflow */
     text-overflow: ellipsis; /* Optional: Adds ellipsis for overflow text */
 
+}
+
+/*----------------ANSWER TO NEEDS------------------*/
+.snapp-answer-needs{/*father tag */
+    margin-top: 3rem;
+    display: flex;/*to put text next to image*/
+    position: relative;
+    /*to put beneffits items on to the pic(super-app.jpg),
+    we should first put Father tag position on reletive ,
+    then we can put Child tag(.snapp-benefits) position on absolute*/
+    min-height: 700px;
+}
+.snapp-answer-needs-pic{
+    background-image: url(./media/images/super-app.jpg);
+    height: 50vh;
+    width: 50%;
+    background-position: center center;
+    background-size: cover;
+    flex: 0 0 50%;
+
+}
+.snapp-answer-needs-text {
+    width: 50%;
+    padding: 2rem ;
+    padding-left: 15%;
+}
+.snapp-answer-needs-text h3{
+    font-size: 1.375rem;
+    font-weight: bold;
+    margin: 1rem 0;
+}
+.snapp-answer-needs-text p{
+    line-height: 1.5rem;
+    font-size: 0.875rem;
+}
+
+.snaap-benefits{
+    /*دربالاتر به تگ پدرش پوزیشن 'رلتیو' دادیم تا بتونیم فرزند رو در صفحه جابه جاکنیم */
+    /*وقتی پدر 'رلتیو' باشد فرزند را 'ابسلوت' میزاریم تا از پدر پیروی کند*/
+    position: absolute;/*برای اینکه بتونیم بندازیمشون روی تصویر*/
+
+    /*برای کم و زیاد کردن وتغییر دادن به کادر فلکس از مقادیر زیر استفاده میکنیم*/
+    bottom: 2rem;
+    right: 6rem;
+    left: 7rem;
+
+}
+.snaap-benefits__items{
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr);
+    gap: 4rem;
+    padding:0 18rem ;
+}
+
+.snaap-benefits-item-cover{
+    background-color: #f2f5f8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1.125rem;
+
+}
+.snaap-benefits-item-title{
+    font-weight: bold;
+    margin: 1rem 0;
+}
+.snaap-benefits-item-description{
+    font-size: 0.725rem;
+    font-weight: 200;
 }
