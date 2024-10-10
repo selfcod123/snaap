@@ -1,17 +1,29 @@
 @import url('fonts.css');
 
-html{
+:root {
+    /*a root for TEXT VARIABLES*/
+    /*at font-size we put ---> var(--text-?)*/
+    --text-xs: 0.725rem;
+    --text-sm: 0.875rem;
+    --text-ml: 1.125rem;
+    --text-lg: 1.25rem;
+    --text-xl: 1.375rem;
+    --text-2xl: 2.25rem;
+}
+
+html {
     font-size: 16px;
-    font-family: "Vazir",sans-serif;
+    font-family: "Vazir", sans-serif;
 
 }
 
-p{
+p {
     font-weight: 300;
 }
-body{
-background-color:#fff ;
-width: 100%;
+
+body {
+    background-color: #fff;
+    width: 100%;
 }
 
 
@@ -19,9 +31,11 @@ width: 100%;
 /*--------------------------------- Basic container styling --------------------------------------*/
 
 .container {
-    max-width: auto ; /* Maximum width of the container */
+    max-width: auto;
+    /* Maximum width of the container */
     width: 100%;
-    margin: 0 auto; /* Centering the container */
+    margin: 0 auto;
+    /* Centering the container */
     /* padding-left: 15px;
     padding-right: 15px; */
 
@@ -31,125 +45,245 @@ width: 100%;
 /* ----------------------------------Media Queries -----------------------------------------*/
 @media (max-width: 1600px) {
     .container {
-        max-width: 1640px; /* Reduce max-width for smaller screens */
+        max-width: 1640px;
+        /* Reduce max-width for smaller screens */
     }
 }
 
 @media (max-width: 1400px) {
     .container {
-        max-width: 1440px; /* Reduce max-width for smaller screens */
+        max-width: 1440px;
+        /* Reduce max-width for smaller screens */
     }
 }
+
 @media (max-width: 1200px) {
     .container {
-        max-width: 1140px; /* Reduce max-width for smaller screens */
+        max-width: 1140px;
+        /* Reduce max-width for smaller screens */
     }
 }
 
 @media (max-width: 768px) {
     .container {
-        max-width: 100%; /* Full width on smaller devices */
-        padding: 0 10px; /* Reduce padding */
+        max-width: 100%;
+        /* Full width on smaller devices */
+        padding: 0 10px;
+        /* Reduce padding */
     }
 }
 
 @media (max-width: 480px) {
     .container {
-        padding: 0 5px; /* Further reduce padding for very small devices */
+        padding: 0 5px;
+        /* Further reduce padding for very small devices */
     }
 }
 
 /*-------------------Navbar   Section-----------------------*/
 
-.navbar{
+.navbar {
     background-color: #fff;
     height: 5rem;
     padding: 0 10rem;
     display: flex;
-    border-bottom: 1px solid rgba(0, 0, 0, .2);/*یک کادر ریز بهش میدیم*/
+    border-bottom: 1px solid rgba(0, 0, 0, .2);
+    /*یک کادر ریز بهش میدیم*/
 }
 
-.navbar__section{
+.navbar__section {
     display: flex;
-    align-items: center;/*برای وسط چین شدن متنها در باکس*/
+    align-items: center;
+    /*برای وسط چین شدن متنها در باکس*/
     height: 100%;
 }
-.navbar__links{
-    display:flex; /*برای خط چین شدن نوشته ها*/
+
+.navbar__links {
+    display: flex;
+    /*برای خط چین شدن نوشته ها*/
 }
-    .navbar__links li{
-        margin-right: 2.2rem;/*برای فاصله افتادن بین نوشته ها*/
-        font-weight:lighter;
+
+.navbar__links>li {
+    /*تمام فرزندان را سلکت کن */
+    /*we need reletive  for drop down menu*/
+    position: relative;
+    /*برای فاصله افتادن بین نوشته ها*/
+    margin-right: 2.2rem;
+    font-weight: lighter;
+    padding: 1rem 0;
+    cursor: pointer;
+}
+.navbar__links>li>a {
+    text-decoration: none;
+    color: #333;
+}
+.no-pointer{/*خودم اضاف کردم برای اینکه نشانگر موس روی دوتای دراپ منو تغییر نکند*/
+    cursor: default !important;
+}
+
+.navbar__links .navbar__links-menu-1 {
+    /*upper line is the father tag*/
+    /*we put absloute so the changes sets only on its father tag,
+     and dosent make efects on the other tags in NAVBAR section*/
+    position: absolute;
+    /*we use left,right,top,bottom to change the position of element in screen*/
+    right: -3rem;
+    top: 3rem;
+    padding: 1rem 0;
+    display: none;/*to Hovering works correctly first we putt diplay on none*/
+    background-color: white;
+    border: 1px solid #dedede;
+    border-radius: 0.75rem;
+    z-index: 50 ;/*برای اینکه دراپ منو موقع باز شدن بیوفتد روی تصاویر دیگر از این پراپرتی استفاده میکنیم*/
+
+}
+
+
+/*This commented code is for when we want to change other text in Navbar when Hovering*/
+
+/* .navbar__links >li > a:hover{
+    color: #21aa58;
+    font-weight: bold;
+} */
+
+
+.navbar__links .navbar__links-menu-1>li {
+    /*we need padding to change heigth and weidth of dropdown Table*/
+    padding: .75rem 1.5rem;
+}
+.navbar__links .navbar__links-menu-1>li > a {
+        font-weight: 300;
+        color: #333;
+
+        white-space: nowrap;
+        /* Prevent text from wrapping */
+        overflow: hidden;
+        /* Hide overflow */
+        text-overflow: ellipsis;
+        /* Optional: Adds ellipsis for overflow text */
+        text-decoration: none;
+        /*to remove the line under text*/
     }
 
-    /*-----------------Hero Section  part 1 ----------------------*/
 
-    .hero__section{
-        display: flex;/*به صورت سطری در میآید*/
+/* Adding hover effect for dropdown menu links */
+.navbar__links .navbar__links-menu-1 > li:hover > a {
+    color: #1aa050; /* Change color to green on hover */
+    font-weight: bold;
+}
+
+.navbar__links >li:hover .navbar__links-menu-1{
+    /*we saide : select navbar__links that has 'li' child ,I only want Hover li with classes .navbar__links-menu-1*/
+    display: block;
+}
+.navbar__links  .dropdown-sidepointer-fathertag{
+    display: flex;
+    span{
+        padding-left: .5rem;
     }
-.hero__section__intro{
+}
+.navbar__links .dropdown-sidepointer{
+    transform: rotate(90deg);
+    /*به خاطر روتیت کردن اینجا نمیتونیم پهش پدینگ بدیم تا موقعیتش درست شود*/
+    /*در نتیجه در بالا در تگ پدر وپدربزرگش پدینگ میدهیم*/
+    width: 1rem;
+    height: 1rem;
+    color: rgba(0, 0, 0, .6);
+}
+
+/*-----------------Hero Section  part 1 ----------------------*/
+
+.hero__section {
+    display: flex;
+    /*به صورت سطری در میآید*/
+}
+
+.hero__section__intro {
     background-color: #21aa58;
     color: #fff;
-    width: 50%;/*50درصد صفحه رو به خودش اختصاص بدهد*/
+    width: 50%;
+    /*50درصد صفحه رو به خودش اختصاص بدهد*/
     padding: 2rem;
     padding-right: 15%;
     /*i said that all paddings 2rem but also incrase paddingright 15%*/
 }
-.hero__section__intro_tagline{
+
+.hero__section__intro_tagline {
     /*این مقدار را از روی متن اصلی سایت اینسپکت گرفتم */
     /*برای تبدیل کردن به 'رم' تقسیم بر 16 میکنیم  چون ابعاد صفحه ما 16 پیکسل تعریف شده است*/
-    font-size: 2.25rem;
+    font-size: var(--text-2xl);
     font-weight: 700;
-    line-height: 3.25rem;/*فاصله خطوط از همدیگه در یک پاراگراف*/
+    line-height: 3.25rem;
+    /*فاصله خطوط از همدیگه در یک پاراگراف*/
     margin-bottom: 1rem;
 }
-.hero__section__intro_description{
-    font-size: 1.25rem;
+
+.hero__section__intro_description {
+    font-size: var(--text-lg);
     font-weight: 300;
     line-height: 1.7rem;
     margin-bottom: 1rem;
 }
-.hero__section__pic{
+
+.hero__section__pic {
     /*در اینجا به جای تگ ایمیج درفایل ایندکس از پراپرتی بکگراند استفاده میکنیم*/
     background-image: url(./media/images/Screenshot\ 2024-10-09\ at\ 10-24-21\ سوپر\ اپلیکیشن\ اسنپ\ سامانه\ هوشمند\ حمل‌ونقل\ تاکسی\ اینترنتی.png);
     min-height: 40vh;
-    width: 50%;/*50درصد صفحه رو به خودش اختصاص بدهد*/
-    background-position: center center;/*برای وسط انداختن تصویر در محور x,y*/
-    background-size: cover;/*we put cover to cover the hole pic in the flex*/
-   /* transform: scaleX(-1);*/   /*to reverse the pic*/
-    flex: 0 0 50%;/*چون در پایین تعریف کردیم پس برای تصویر هم تعریف میکنیم*/
+    width: 50%;
+    /*50درصد صفحه رو به خودش اختصاص بدهد*/
+    background-position: center center;
+    /*برای وسط انداختن تصویر در محور x,y*/
+    background-size: cover;
+    /*we put cover to cover the hole pic in the flex*/
+    /* transform: scaleX(-1);*/
+    /*to reverse the pic*/
+    flex: 0 0 50%;
+    /*چون در پایین تعریف کردیم پس برای تصویر هم تعریف میکنیم*/
 }
 
 /*------------------------------Hero Section   part 2    PHONE BOX & Buttons-------------------------------*/
 
-.hero__section__intro_sendlink{/*main tag (father)-main tag for numberbox & dot & button1*/
-    display: flex;/*i put display in flex so ican style all the elements inside the main tag together*/
+.hero__section__intro_sendlink {
+    /*main tag (father)-main tag for numberbox & dot & button1*/
+    display: flex;
+    /*i put display in flex so ican style all the elements inside the main tag together*/
     height: 3.5rem;
-    align-items: center;/*تا تمامی المان های درون فلکس وسط چین شوند*/
+    align-items: center;
+    /*تا تمامی المان های درون فلکس وسط چین شوند*/
     margin-bottom: 1rem;
 }
-.hero__section__intro_sendlink > button{/*to style the button 1(ارسال لینک)*/
+
+.hero__section__intro_sendlink>button {
+    /*to style the button 1(ارسال لینک)*/
     border: none;
     border-radius: 0.375rem;
     color: #21aa58;
-    padding: 0 1rem;/*top & down=0 left & right=1rem*/
+    padding: 0 1rem;
+    /*top & down=0 left & right=1rem*/
     background-color: white;
     font-family: inherit !important;
     font-weight: 43.75rem;
-    flex: 0 0 24%;/*to cover 24% of our flexbox */
+    flex: 0 0 24%;
+    /*to cover 24% of our flexbox */
     height: 2.5rem;
     margin-right: 1rem;
 
 }
-.hero__section__intro_sendlink_input{/*main tag for numberbox & dot*/
-    display: inherit;/*یعنی از تگ پدر ارث بری کن یا پیروی کن*/
+
+.hero__section__intro_sendlink_input {
+    /*main tag for numberbox & dot*/
+    display: inherit;
+    /*یعنی از تگ پدر ارث بری کن یا پیروی کن*/
     align-items: center;
-    border-bottom: 1px solid white;/*برای اضافه کردن خط سفید زیر باکس*/
-    flex: 0 0 50%;/*to cover 50% of our flexbox*/
+    border-bottom: 1px solid white;
+    /*برای اضافه کردن خط سفید زیر باکس*/
+    flex: 0 0 50%;
+    /*to cover 50% of our flexbox*/
 
 }
 
-.hero__section__intro_sendlink_input input{/*to style the phone number box*/
+.hero__section__intro_sendlink_input input {
+    /*to style the phone number box*/
     /*to fade the box  structure */
     outline: none;
     background-color: transparent;
@@ -159,82 +293,101 @@ width: 100%;
     line-height: 3rem;
     padding: 0 0.5rem;
     height: 2.5rem;
-    width: 100%;/*برای اینکه عرض باکس شماره را ببندیم*/
+    width: 100%;
+    /*برای اینکه عرض باکس شماره را ببندیم*/
 }
-.hero__section__intro_sendlink_input input::placeholder{/*برای استایل دادن به مقادیر درون باکس از شبه المنت استفاده کردم*/
+
+.hero__section__intro_sendlink_input input::placeholder {
+    /*برای استایل دادن به مقادیر درون باکس از شبه المنت استفاده کردم*/
     color: white;
 }
 
-.hero__section__intro_sendlink_input .input__dot{/*برای ساخت نقطه سفید درون باکس*/
-    width:.5rem ;
+.hero__section__intro_sendlink_input .input__dot {
+    /*برای ساخت نقطه سفید درون باکس*/
+    width: .5rem;
     height: .5rem;
     border-radius: 9999999px;
     background-color: white;
-    margin-left: .5rem ;
+    margin-left: .5rem;
 }
-.hero__section_gotowebapp{/*to style the button2(ورد به اپ)*/
+
+.hero__section_gotowebapp {
+    /*to style the button2(ورد به اپ)*/
     border: 1px solid white;
     border-radius: 0.25rem;
 
     background-color: transparent;
     color: #fff;
 
-    font-size: 1.125rem;
-    font-weight:600 ;
+    font-size: var(--text-ml);
+    font-weight: 600;
     font-family: inherit !important;
 
-    cursor: pointer;/*برای اضافه کردن نشانگر به موس*/
+    cursor: pointer;
+    /*برای اضافه کردن نشانگر به موس*/
 
     height: 3rem;
-    padding:0 1.5rem;
+    padding: 0 1.5rem;
     margin-top: 1rem;
 
 }
-.hero__section_gotowebapp:hover{
+
+.hero__section_gotowebapp:hover {
     background-color: rgba(255, 255, 255, 0.1);
 }
 
 /*------------------LIST APPLICATION  Section----------------------*/
 
-.snapp-apps{
+.snapp-apps {
     display: grid;
-    grid-template-columns: auto auto  auto auto auto;
+    grid-template-columns: auto auto auto auto auto;
 
     align-items: center;
     min-height: 30vh;
     padding: 0 10%;
     justify-content: space-around;
 
-    content-visibility: auto;/*to incrase the quility of pics*/
+    content-visibility: auto;
+    /*to incrase the quility of pics*/
 }
 
 /*---------------APPS  SECTION-------------------*/
 
-.intro-of-snapp-apps{/*father tag for items(div-1 tag) & title (h2 tag) */
-    background-color:#275e96;
+.intro-of-snapp-apps {
+    /*father tag for items(div-1 tag) & title (h2 tag) */
+    background-color: #275e96;
     margin-bottom: 2.5rem;
     display: grid;
     width: auto;
 }
-.intro-of-snapp-apps-title{/*h2 tag*/
-    font-size: 2.25rem;
+
+.intro-of-snapp-apps-title {
+    /*h2 tag*/
+    font-size: var(--text-2xl);
     font-weight: 700;
     line-height: 3.25rem;
     padding: 2.5rem 0;
     color: #333;
     text-align: center;
 }
-.intro-of-snapp-apps-items{/*div-1 زمینه را برای تعریف تصاویر و متن ها وابعادشان آماده میکنیم*/
+
+.intro-of-snapp-apps-items {
+    /*div-1 زمینه را برای تعریف تصاویر و متن ها وابعادشان آماده میکنیم*/
     display: grid;
-    grid-template-columns:repeat(3 ,1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     padding: 0 10rem;
 }
-.intro-of-snapp-apps-items > a{/*main tag for A,B,C,D*/
-    text-decoration: none;/*to remove the line under text*/
+
+.intro-of-snapp-apps-items>a {
+    /*main tag for A,B,C,D*/
+    text-decoration: none;
+    /*to remove the line under text*/
     color: inherit;
 }
-.intro-of-snapp-apps-item{/*A*/
+
+.intro-of-snapp-apps-item {
+    /*A*/
     background-color: white;
     border-radius: 1.125rem;
     display: flex;
@@ -242,35 +395,47 @@ width: 100%;
     padding: .75rem;
     margin: 1rem;
 }
-.intro-of-snapp-apps-itemsinfo{/*B*/
+
+.intro-of-snapp-apps-itemsinfo {
+    /*B*/
     margin-right: .5rem;
     padding: 1rem 0;
 }
-.intro-of-snapp-apps-itemsinfo h3{/*C*/
+
+.intro-of-snapp-apps-itemsinfo h3 {
+    /*C*/
     font-weight: bold;
     margin-bottom: .5rem;
 }
-.intro-of-snapp-apps-itemsinfo p{/*D*/
-    font-size: 0.875rem;
-    color:#a3a3a3;
+
+.intro-of-snapp-apps-itemsinfo p {
+    /*D*/
+    font-size: var(--text-sm);
+    color: #a3a3a3;
     font-weight: 100;
-    white-space: nowrap; /* Prevent text from wrapping */
-    overflow: hidden;    /* Hide overflow */
-    text-overflow: ellipsis; /* Optional: Adds ellipsis for overflow text */
+    white-space: nowrap;
+    /* Prevent text from wrapping */
+    overflow: hidden;
+    /* Hide overflow */
+    text-overflow: ellipsis;
+    /* Optional: Adds ellipsis for overflow text */
 
 }
 
 /*----------------ANSWER TO NEEDS------------------*/
-.snapp-answer-needs{/*father tag */
+.snapp-answer-needs {
+    /*father tag */
     margin-top: 3rem;
-    display: flex;/*to put text next to image*/
+    display: flex;
+    /*to put text next to image*/
     position: relative;
     /*to put beneffits items on to the pic(super-app.jpg),
     we should first put Father tag position on reletive ,
     then we can put Child tag(.snapp-benefits) position on absolute*/
     min-height: 700px;
 }
-.snapp-answer-needs-pic{
+
+.snapp-answer-needs-pic {
     background-image: url(./media/images/super-app.jpg);
     height: 50vh;
     width: 50%;
@@ -279,25 +444,29 @@ width: 100%;
     flex: 0 0 50%;
 
 }
+
 .snapp-answer-needs-text {
     width: 50%;
-    padding: 2rem ;
+    padding: 2rem;
     padding-left: 15%;
 }
-.snapp-answer-needs-text h3{
-    font-size: 1.375rem;
+
+.snapp-answer-needs-text h3 {
+    font-size: var(--text-xl);
     font-weight: bold;
     margin: 1rem 0;
 }
-.snapp-answer-needs-text p{
+
+.snapp-answer-needs-text p {
     line-height: 1.5rem;
-    font-size: 0.875rem;
+    font-size: var(--text-sm);
 }
 
-.snaap-benefits{
+.snaap-benefits {
     /*دربالاتر به تگ پدرش پوزیشن 'رلتیو' دادیم تا بتونیم فرزند رو در صفحه جابه جاکنیم */
     /*وقتی پدر 'رلتیو' باشد فرزند را 'ابسلوت' میزاریم تا از پدر پیروی کند*/
-    position: absolute;/*برای اینکه بتونیم بندازیمشون روی تصویر*/
+    position: absolute;
+    /*برای اینکه بتونیم بندازیمشون روی تصویر*/
 
     /*برای کم و زیاد کردن وتغییر دادن به کادر فلکس از مقادیر زیر استفاده میکنیم*/
     bottom: 2rem;
@@ -305,14 +474,15 @@ width: 100%;
     left: 7rem;
 
 }
-.snaap-benefits__items{
+
+.snaap-benefits__items {
     display: grid;
-    grid-template-columns: repeat(3 , 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 4rem;
-    padding:0 18rem ;
+    padding: 0 18rem;
 }
 
-.snaap-benefits-item-cover{
+.snaap-benefits-item-cover {
     background-color: #f2f5f8;
     display: flex;
     align-items: center;
@@ -320,11 +490,13 @@ width: 100%;
     border-radius: 1.125rem;
 
 }
-.snaap-benefits-item-title{
+
+.snaap-benefits-item-title {
     font-weight: bold;
     margin: 1rem 0;
 }
-.snaap-benefits-item-description{
-    font-size: 0.725rem;
+
+.snaap-benefits-item-description {
+    font-size: var(--text-xs);
     font-weight: 200;
 }
