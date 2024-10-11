@@ -517,7 +517,7 @@ body {
 
 .apply__section{
     background-color: var(--background-primery);
-    padding: 0 2rem;
+    padding: 4rem;
 }
 
 .apply__section-input h2{
@@ -607,4 +607,41 @@ body {
 }
 .apply__section-info-tags-texts p{
     font-size: var(--text-sm);
+}
+
+
+/*---------- Footer SECTION----------*/
+
+
+.footer{
+    background-color: white;
+    padding-top: 3rem;
+    padding-left: 5% !important;
+    padding-right: 5% !important;
+    margin:1.5rem 0;
+
+}
+.footer-info-text ul{
+display: flex;
+justify-content: center;
+list-style-type: none;
+}
+.footer-info-text li{
+    margin-left: 1.25rem;
+}
+
+.footer-info-text a{
+    text-decoration: none;
+    color: #333;
+    font-weight: 300;
+}
+.footer-info-logo{
+    display: flex;
+    justify-content: center;
+    margin: 1.5rem 0;
+    gap:.5rem;
+}
+.footer-info-laws{
+    display: flex;
+    justify-content: center;
 }
