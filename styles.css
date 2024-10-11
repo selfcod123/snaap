@@ -433,6 +433,64 @@ body {
 
 }
 
+
+/*------------- Slider Section-------------*/
+
+.snapp__slider-section{
+    margin: 5rem 0;
+}
+
+.snapp-slider-wrapper{
+    padding-left: max(140px,15%) !important;
+    padding-right: max(140px,15%) !important;
+    position: relative;
+}
+
+#snapp-slider {
+    border-radius: 1rem;
+}
+#snapp-slider .keen-slider__slide{
+    height: 25rem;
+    width: 100%;
+}
+
+#snapp-slider .keen-slider__slide img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.snapp-dots-wrapper{
+    position: absolute;
+    bottom: 1rem;
+    /*برای وسط چین کردن المانها*/
+    display: flex;
+    justify-content: center;
+    right: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.snapp-dots-wrapper .keen-dots{
+    /*استایل برای کادری که دات ها درونش هستن*/
+    background-color: rgba(255 ,255 , 255, .15);
+    display: flex;/*برای اینکه یک ارتفاع برای خودش درست کرده بود و ما نمیخواستیم*/
+    padding: .3rem;
+    border-radius: .5rem;
+}
+.snapp-dots-wrapper .keen-dots .dot{
+    /*استایل برای خود داتها*/
+    padding: .3rem;
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    margin: 0 .2rem;
+    background-color: rgba(255, 255, 255, .3);
+    cursor: pointer;
+}
+.snapp-dots-wrapper .keen-dots .dot.active{
+    background-color: white;
+}
 /*----------------ANSWER TO NEEDS------------------*/
 .snapp-answer-needs {
     /*father tag */
@@ -473,7 +531,7 @@ body {
     font-size: var(--text-sm);
 }
 
-.snaap-benefits {
+.snapp-benefits {
     /*دربالاتر به تگ پدرش پوزیشن 'رلتیو' دادیم تا بتونیم فرزند رو در صفحه جابه جاکنیم */
     /*وقتی پدر 'رلتیو' باشد فرزند را 'ابسلوت' میزاریم تا از پدر پیروی کند*/
     position: absolute;
@@ -486,14 +544,16 @@ body {
 
 }
 
-.snaap-benefits__items {
+.snapp-benefits__items {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 4rem;
-    padding: 0 18rem;
+    padding-left: max(140px,15%) !important;
+    padding-right: max(140px,15%) !important;
+
 }
 
-.snaap-benefits-item-cover {
+.snapp-benefits-item-cover {
     background-color: var(--background-primery);
     display: flex;
     align-items: center;
@@ -502,14 +562,16 @@ body {
 
 }
 
-.snaap-benefits-item-title {
+.snapp-benefits-item-title {
     font-weight: bold;
     margin: 1rem 0;
 }
 
-.snaap-benefits-item-description {
+.snapp-benefits-item-description {
     font-size: var(--text-xs);
     font-weight: 200;
+    line-height: 1.7;
+    text-align: right !important;
 }
 
 
@@ -517,7 +579,9 @@ body {
 
 .apply__section{
     background-color: var(--background-primery);
-    padding: 4rem;
+    padding: 4rem 0;
+    padding-left: max(140px,15%) !important;
+    padding-right: max(140px,15%) !important;
 }
 
 .apply__section-input h2{
@@ -562,8 +626,11 @@ body {
 
 .apply__section-video{
     border-radius: .5rem;
-    overflow: hidden ;
+    overflow: hidden ;/*we put hidden to say
+     that property of this elemnt should set over on (بیوفتد روی)the father tag*/
+     /*if we dont put overflow on hidden the border radius wont be  set*/
     margin: 2.5rem;
+
 }
 .apply__section-video video{
     width: 100%;
