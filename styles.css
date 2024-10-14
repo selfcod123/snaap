@@ -5,9 +5,11 @@
     /*at font-size we put ---> var(--text-?)*/
     --text-xs: 0.725rem;
     --text-sm: 0.875rem;
+    --text-base:1rem;
     --text-ml: 1.125rem;
     --text-lg: 1.25rem;
     --text-xl: 1.375rem;
+    --text-halfxl: 1.5rem;
     --text-2xl: 2.25rem;
     --background-primery:#f2f5f8;
 }
@@ -40,33 +42,44 @@ body {
     /* Centering the container */
     /* padding-left: 15px;
     padding-right: 15px; */
-
+    padding: 0 2rem;
 }
 
 
 /* ----------------------------------Media Queries -----------------------------------------*/
-@media (max-width: 1600px) {
+
+
+@media (min-width: 1600px) {
     .container {
         max-width: 1640px;
         /* Reduce max-width for smaller screens */
     }
 }
 
-@media (max-width: 1400px) {
+@media (min-width: 1400px) {
     .container {
         max-width: 1440px;
         /* Reduce max-width for smaller screens */
     }
 }
 
-@media (max-width: 1200px) {
+
+@media (min-width: 1200px) {
     .container {
         max-width: 1140px;
         /* Reduce max-width for smaller screens */
     }
 }
 
-@media (max-width: 768px) {
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+        /* Reduce max-width for smaller screens */
+        padding: 0;
+    }
+}
+
+@media (min-width: 768px) {
     .container {
         max-width: 100%;
         /* Full width on smaller devices */
@@ -75,7 +88,7 @@ body {
     }
 }
 
-@media (max-width: 480px) {
+@media (min-width: 480px) {
     .container {
         padding: 0 5px;
         /* Further reduce padding for very small devices */
@@ -103,11 +116,14 @@ body {
     align-items: center;
     /*برای وسط چین شدن متنها در باکس*/
     height: 100%;
+    justify-content: space-between;
 }
+.navbar__section img{
 
-.navbar__links {
-    display: flex;
-    /*برای خط چین شدن نوشته ها*/
+}
+.navbar__links {/*responsive*/
+    /* برای خط چین شدن نوشته ها فلکس میگذارم*/
+    display: none;/*RES1*/
 }
 
 .navbar__links>li {
@@ -198,6 +214,20 @@ body {
     color: rgba(0, 0, 0, .6);
 }
 
+
+/*$$$$$$$$$$$$$$--Nabar Responsive--$$$$$$$$$$$$$$$$*/
+@media (min-width : 992px){
+    .navbar__links{
+        display: flex;
+    }
+    .navbar__section{
+        justify-content: flex-start;
+    }
+    .menu-logo{
+        display: none;
+    }
+}
+
 /*-----------------Hero Section  part 1 ----------------------*/
 
 .hero__section {
@@ -206,21 +236,22 @@ body {
     margin-top: 4.5rem ;
 }
 
-.hero__section__intro {
+.hero__section__intro {/*responsive*/
     background-color: #21aa58;
     color: #fff;
-    width: 50%;
+    width: 100%;/*RES1*/
     /*50درصد صفحه رو به خودش اختصاص بدهد*/
-    padding: 2rem;
-    padding-right: 15%;
+    padding: 1rem 1rem 1.5rem;/*RES2*/
+    padding-right: 10%;/*RES3*/
     /*i said that all paddings 2rem but also incrase paddingright 15%*/
 
 }
 
-.hero__section__intro_tagline {
+.hero__section__intro_tagline {/*responsive*/
     /*این مقدار را از روی متن اصلی سایت اینسپکت گرفتم */
     /*برای تبدیل کردن به 'رم' تقسیم بر 16 میکنیم  چون ابعاد صفحه ما 16 پیکسل تعریف شده است*/
-    font-size: var(--text-2xl);
+
+    font-size: var(--text-halfxl);/*RES1*/
     font-weight: 700;
     line-height: 3.25rem;
     /*فاصله خطوط از همدیگه در یک پاراگراف*/
@@ -228,14 +259,14 @@ body {
 
 }
 
-.hero__section__intro_description {
-    font-size: var(--text-lg);
+.hero__section__intro_description {/*responsive*/
+    font-size: var(--text-base);/*RES1*/
     font-weight: 300;
     line-height: 1.7rem;
     margin-bottom: 1rem;
 }
 
-.hero__section__pic {
+.hero__section__pic {/*responsive*/
     /*در اینجا به جای تگ ایمیج درفایل ایندکس از پراپرتی بکگراند استفاده میکنیم*/
     background-image: url(./media/images/intro_desktop.jpg);
     min-height: 40vh;
@@ -248,20 +279,28 @@ body {
     /*we put cover to cover the hole pic in the flex*/
     transform: scaleX(-1);
     /*to reverse the pic*/
-    flex: 0 0 50%;
+
     /*چون در پایین تعریف کردیم پس برای تصویر هم تعریف میکنیم*/
+    flex: 0 0 50%;
+
+    display: none;/*RES1*/
 }
+
 
 /*------------------------------Hero Section   part 2    PHONE BOX & Buttons-------------------------------*/
 
-.hero__section__intro_sendlink {
+.hero__section__intro_sendlink {/*responsive*/
     /*main tag (father)-main tag for numberbox & dot & button1*/
-    display: flex;
+
     /*i put display in flex so ican style all the elements inside the main tag together*/
+    /* display: flex; */  /*Commented for Responsive Part*/
+
     height: 3.5rem;
     align-items: center;
     /*تا تمامی المان های درون فلکس وسط چین شوند*/
     margin-bottom: 1rem;
+
+    display: none;/*RES1*/
 }
 
 .hero__section__intro_sendlink>button {
@@ -322,7 +361,7 @@ body {
     margin-left: .5rem;
 }
 
-.hero__section_gotowebapp {
+.hero__section_gotowebapp {/*responsive*/
     /*to style the button2(ورد به اپ)*/
     border: 1px solid white;
     border-radius: 0.25rem;
@@ -337,14 +376,64 @@ body {
     cursor: pointer;
     /*برای اضافه کردن نشانگر به موس*/
 
+
     height: 3rem;
     padding: 0 1.5rem;
     margin-top: 1rem;
 
+    display: none;/*RES1*/
 }
 
 .hero__section_gotowebapp:hover {
     background-color: rgba(255, 255, 255, 0.1);
+}
+
+.hero__section_downloadapp{/*respopnsive*/
+        /*to style the button2(ورد به اپ)*/
+        border: none;
+        background-color: white;
+        border-radius: 0.325rem;
+
+        color: #333;
+        font-size: var(--text-base);
+        font-weight: 600;
+        font-family: inherit !important;
+        cursor: pointer;
+        width: 100%;
+        height: 3rem;
+        padding: 0 1.5rem;
+}
+
+/*$$$$$$$$--Hero section Responsive--$$$$$$$$*/
+@media (min-width: 992px) {
+    /*'گفتیم این حداقل عرض که رسید،تگ داخلش،مقادیر درونش را به این اندازه تغییر بده*/
+    .hero__section__intro{
+        width: 50%;
+        padding: 2rem;
+        padding-right: 15%;
+    }
+    .hero__section__intro_tagline{
+        font-size: var(--text-2xl);
+    }
+    .hero__section__intro_description{
+        font-size: var(--text-lg);
+    }
+    /*گفتیم این حداقل عرض که رسید ،تگ داخلش،"دیسپلی بلاک "شود یعنی نمایش داده شود*/
+    .hero__section__pic {
+        display: block;
+    }
+    /*گفتیم این حداقل عرض که رسید ،تگ داخلش، بیا دیسپلی را فلکس قرار بده تا تگ در این اندازه از عرض ظاهر شود*/
+    .hero__section__intro_sendlink {
+        display: flex;
+    }
+    .hero__section_gotowebapp{
+        display: block;
+
+    }
+    /*گفتیم این حداقل عرض که رسید دیگه بهمون نشونش نده*/
+    .hero__section_downloadapp{
+        display: none;
+    }
 }
 
 /*------------------LIST APPLICATION  Section----------------------*/
@@ -362,6 +451,16 @@ body {
     /*to incrase the quility of pics*/
 }
 
+.snapp-apps-links-section{/*responsive*/
+    display: none;
+}
+
+/*$$$$$$--LIST APPLICATION  Section RESPONSIVE--$$$$$$$$$$*/
+@media (min-width: 992px){
+    .snapp-apps-links-section{
+        display: block;
+    }
+}
 /*---------------APPS  SECTION-------------------*/
 
 .intro-of-snapp-apps {
@@ -370,25 +469,32 @@ body {
     margin-bottom: 2.5rem;
     display: grid;
     width: auto;
+
+    padding-right: max(140px,15%) !important;
+    padding-left: max(140px,15%) !important;
+    margin-bottom: 2.5rem !important;
+    padding-bottom: 2.5rem !important;
 }
 
-.intro-of-snapp-apps-title {
+.intro-of-snapp-apps-title {/*responsive*/
     /*h2 tag*/
-    font-size: var(--text-2xl);
+    font-size: var(--text-lg);/*RES1*/
     font-weight: 700;
     line-height: 3.25rem;
     padding: 2.5rem 0;
     color: #333;
     text-align: center;
+
 }
 
-.intro-of-snapp-apps-items {
+.intro-of-snapp-apps-items {/*responsive*/
     /*div-1 زمینه را برای تعریف تصاویر و متن ها وابعادشان آماده میکنیم*/
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);/*RES1*/
     gap: 2rem;
-    padding: 0 10rem;
+    margin: 1rem 0.5rem;
 }
+
 
 .intro-of-snapp-apps-items>a {
     /*main tag for A,B,C,D*/
@@ -397,14 +503,18 @@ body {
     color: inherit;
 }
 
-.intro-of-snapp-apps-item {
+.intro-of-snapp-apps-item {/*responsive*/
     /*A*/
     background-color: white;
     border-radius: 1.125rem;
     display: flex;
     align-items: center;
-    padding: .75rem;
-    margin: 1rem;
+    padding: .5rem;
+
+    width: 78%;
+    max-width: 321px;
+
+    flex-direction: column;/*RES1*/
 }
 
 .intro-of-snapp-apps-itemsinfo {
@@ -413,36 +523,60 @@ body {
     padding: 1rem 0;
 }
 
-.intro-of-snapp-apps-itemsinfo h3 {
+.intro-of-snapp-apps-itemsinfo h3 {/*responsive*/
     /*C*/
     font-weight: bold;
     margin-bottom: .5rem;
+
+    text-align: center;/*RES1*/
+    line-height: 1.5;/*RES2*/
+    font-size: var(--text-sm);/*RES3*/
 }
 
-.intro-of-snapp-apps-itemsinfo p {
+.intro-of-snapp-apps-itemsinfo p {/*responsive*/
     /*D*/
     font-size: var(--text-sm);
     color: #a3a3a3;
     font-weight: 100;
-    white-space: nowrap;
-    /* Prevent text from wrapping */
-    overflow: hidden;
-    /* Hide overflow */
-    text-overflow: ellipsis;
-    /* Optional: Adds ellipsis for overflow text */
 
+    overflow: hidden;  /* Hide overflow */
+    word-wrap: break-word;/*break words to next paragraph*/
+
+    display: none;/*RES1*/
 }
 
+/*$$$$$$$$$$$$$$$$--APPS  SECTION RESPONSIVE --$$$$$$$$$$$$$$$$$*/
+
+
+@media (min-width: 992px){
+    .intro-of-snapp-apps-title {
+        font-size: var(--text-2xl);
+
+    }
+    .intro-of-snapp-apps-items {
+        grid-template-columns: repeat(3, 1fr);/*RES1*/
+    }
+    /*در سایز بزرگ گرید حالت سطری بشود*/
+    .intro-of-snapp-apps-item {
+        flex-direction: row;
+    }
+    .intro-of-snapp-apps-itemsinfo h3 {
+        font-size: var(--text-base);
+    }
+/*در سایز بزرگ ،پاراگراف نمایش داده شود*/
+    .intro-of-snapp-apps-itemsinfo p {
+        display: block;
+    }
 
 /*------------- Slider Section-------------*/
 
 .snapp__slider-section{
-    margin: 5rem 0;
+    margin: 2rem 0;/*responsive*/
 }
 
 .snapp-slider-wrapper{
-    padding-left: max(140px,15%) !important;
-    padding-right: max(140px,15%) !important;
+    padding: 0 1rem;/*responsive*/
+    overflow: hidden;
     position: relative;
 }
 
@@ -450,7 +584,7 @@ body {
     border-radius: 1rem;
 }
 #snapp-slider .keen-slider__slide{
-    height: 25rem;
+    height: 8rem;/*responsive*/
     width: 100%;
 }
 
@@ -491,11 +625,32 @@ body {
 .snapp-dots-wrapper .keen-dots .dot.active{
     background-color: white;
 }
+
+/*$$$$$$$$$$$$--Slider Section RESPONSIVE --$$$$$$$$$$$$*/
+
+@media (min-width: 768px){/*tablet screen*/
+    #snapp-slider .keen-slider__slide{
+        height: 17rem;
+    }
+}
+@media (min-width: 992px){
+    .snapp__slider-section{
+        margin: 5rem 0;
+    }
+    .snapp-slider-wrapper{
+        padding-left: max(140px,15%) !important;
+        padding-right: max(140px,15%) !important;
+    }
+    #snapp-slider .keen-slider__slide{
+        height: 27.5rem;
+    }
+}
 /*----------------ANSWER TO NEEDS------------------*/
-.snapp-answer-needs {
-    /*father tag */
+.snapp-answer-needs {/*responsive*/
+    /* display: flex; */ /*RES1*/
+
     margin-top: 3rem;
-    display: flex;
+
     /*to put text next to image*/
     position: relative;
     /*to put beneffits items on to the pic(super-app.jpg),
@@ -504,53 +659,47 @@ body {
     min-height: 700px;
 }
 
-.snapp-answer-needs-pic {
+.snapp-answer-needs-pic {/*responsive*/
     background-image: url(./media/images/super-app.jpg);
-    height: 50vh;
-    width: 50%;
+    height: 25vh;/*RES1*/
+    width: 100%;/*RES2*/
     background-position: center center;
     background-size: cover;
     flex: 0 0 50%;
 
 }
 
-.snapp-answer-needs-text {
-    width: 50%;
-    padding: 2rem;
+.snapp-answer-needs-text {/*responsive*/
+    width: 100%;/*RES1*/
     padding-left: 15%;
+    color: #333;
+    padding: 2rem 0;
 }
 
 .snapp-answer-needs-text h3 {
     font-size: var(--text-xl);
     font-weight: bold;
     margin: 1rem 0;
+    padding: 0 2rem;
 }
 
 .snapp-answer-needs-text p {
     line-height: 1.5rem;
     font-size: var(--text-sm);
+    padding: 0 2rem;/**/
 }
 
-.snapp-benefits {
-    /*دربالاتر به تگ پدرش پوزیشن 'رلتیو' دادیم تا بتونیم فرزند رو در صفحه جابه جاکنیم */
-    /*وقتی پدر 'رلتیو' باشد فرزند را 'ابسلوت' میزاریم تا از پدر پیروی کند*/
-    position: absolute;
-    /*برای اینکه بتونیم بندازیمشون روی تصویر*/
+/*.snapp-benefits {
+  class repnsived }
+  */
 
-    /*برای کم و زیاد کردن وتغییر دادن به کادر فلکس از مقادیر زیر استفاده میکنیم*/
-    bottom: 2rem;
-    right: 6rem;
-    left: 7rem;
-
-}
-
-.snapp-benefits__items {
+.snapp-benefits__items {/*responsive*/
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 4rem;
-    padding-left: max(140px,15%) !important;
-    padding-right: max(140px,15%) !important;
-
+    grid-template-columns: repeat(1, /*برای اینکه گرید ستونی شود مقدار را یک گذاشتم*/1fr);/*RES1*/
+    gap: 2rem;/*RES2*/
+    padding: 0 1rem;/*RES3*/
+    margin-bottom: 2rem;
+}
 }
 
 .snapp-benefits-item-cover {
@@ -574,14 +723,61 @@ body {
     text-align: right !important;
 }
 
+/*$$$$$$$$$$$$$$-- ANSWER TO NEEDS RESPONSIVE--$$$$$$$$$$$$*/
+@media (min-width: 992px){
+    .snapp-answer-needs {
+        display: flex;
+    }
 
+    .snapp-answer-needs-text{
+        width: 50%;
+        padding-right: 2%;
+}
+
+    .snapp-answer-needs-pic{
+        width: 50%;
+        height: 50vh;
+    }
+    .snapp-benefits {
+        /*دربالاتر به تگ پدرش پوزیشن 'رلتیو' دادیم تا بتونیم فرزند رو در صفحه جابه جاکنیم */
+        /*وقتی پدر 'رلتیو' باشد فرزند را 'ابسلوت' میزاریم تا از پدر پیروی کند*/
+        position: absolute;
+        /*برای اینکه بتونیم بندازیمشون روی تصویر*/
+
+        /*برای کم و زیاد کردن وتغییر دادن به کادر فلکس از مقادیر زیر استفاده میکنیم*/
+        bottom: 2rem;
+        right: 6rem;
+        left: 7rem;
+
+    }
+    .snapp-benefits__items {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 4rem;
+        padding-left: max(140px,15%) !important;
+        padding-right: max(140px,15%) !important;
+
+    }
+    .snapp-answer-needs-text {
+        width: 50%;
+        padding-left: 15%;
+
+    }
+
+}
 /*-----------APPLY   SECTION-------*/
 
-.apply__section{
+.apply__section{/**/
     background-color: var(--background-primery);
     padding: 4rem 0;
-    padding-left: max(140px,15%) !important;
-    padding-right: max(140px,15%) !important;
+    padding-left: 1rem!important;
+    padding-right: 1rem !important;
+
+    text-align: center !important;
+      display: flex !important;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
 }
 
 .apply__section-input h2{
@@ -637,50 +833,114 @@ body {
     height: 100%;
 }
 
-.apply__section-info{/*Father Tag 2*/
-    /* display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem; */
-    display: flex;
-    justify-content: center;
-}
-.apply__section-info-tags{
-    /* background-color: rgb(139, 101, 101);
-    border: 1px solid wheat;
-    border-radius: 1rem;
-    padding: 1.5rem;
-    display: flex; */
+
+
+.apply__section-info-tags{/*responsive*/
     display: grid;
-    grid-template-columns: repeat(2 , 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(1, 1fr);
+    margin: 2rem 0;
+    gap: 3rem;
+
 }
-.apply__section-info-tag{
-    background-color: #f9f9f9;
-    border: 1px solid #e0e0e0;
+.apply__section-info-tag{/**/
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
     border-radius: 8px;
-    padding: 16px;
+
     text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
+    width: 89%;
+    line-height: 1.2rem;
+    padding-left: 3.2rem !important;
+    padding-right: 3.2rem !important;
+    align-items: center;
+    display: flex;
+    flex-direction: column;/**/
+    /* margin-top: 32px !important; */
+    height: 178px;/**/
+    padding:1rem 0;
+    overflow: hidden;
+     text-overflow: ellipsis;
 }
 
+.apply__section-info-tags-icon img {
+  margin-bottom: 1rem;
+}
+
+.apply__section-info-tags-texts{
+    text-align: center !important;
+    font-weight: bold;
+     padding: 1rem 0;
+     line-height: 1.7;
+
+}
+
+
+.apply__section-info-tags-texts h3{/**/
+    font-weight: bold;
+    padding: .5rem 0;
+    text-align: center;/**/
+    /*به هنگام کوچک بودن متنها راست چین شوند*/
+
+}
+.apply__section-info-tags-texts p{/**/
+    font-size: var(--text-sm);
+    text-align: center;/**/
+
+}
 .apply__section-info-tag:hover {
     transform: translateY(-5px);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
-.apply__section-info-tags-texts h3{
-    font-weight: bold;
-    padding: .5rem 0;
+
+
+/*$$$$$$$$$$$$$$-- ANSWER TO NEEDS RESPONSIVE--$$$$$$$$$$$$*/
+
+@media (min-width: 768px){
+
+    .apply__section{
+        padding-left: 85px !important;
+        padding-right: 85px !important;
+    }
+    .apply__section-info-tags{
+        grid-template-columns: repeat(2, 1fr);/*RES1*/
+    }
 
 }
-.apply__section-info-tags-texts p{
-    font-size: var(--text-sm);
-}
+@media (min-width: 992px){
+ .apply__section{
+        padding-left: max(140px,15%) !important;
+        padding-right: max(140px,15%) !important;
+        }
 
 
-/*---------- Footer SECTION----------*/
+            .apply__section-info-tags{
+                margin: 2.5rem ;
+            }
+
+            .apply__section-info-tag{
+                flex-direction: row;
+                height: 165px;
+                width: 84%;
+            }
+            .apply__section-info-tags-icon img{
+                margin-bottom:0 ;
+                width: 7.5rem;
+        }
+        .apply__section-info-tags-texts h3{
+            text-align: right !important;
+            padding-top: 8px !important;
+            padding-bottom: 8px !important;
+        }
+        .apply__section-info-tags-texts p{
+            text-align: right !important;
+        }
+
+    }
+    /*---------- Footer SECTION----------*/
 
 
-.footer{
+.footer {
     background-color: white;
     padding-top: 3rem;
     padding-left: 5% !important;
@@ -692,11 +952,15 @@ body {
 display: flex;
 justify-content: center;
 list-style-type: none;
+flex-wrap: wrap;/*برای ریسپانسیو قرارا دادم*/
 }
 .footer-info-text li{
     margin-left: 1.25rem;
+    margin: 1rem ;
 }
-
+.footer-info-text li:first-child{/*لزومی ندارد*/
+    margin-right: 1rem;
+}
 .footer-info-text a{
     text-decoration: none;
     color: #333;

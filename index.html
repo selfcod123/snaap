@@ -17,6 +17,9 @@
     <navbar class="navbar">
         <div class="container">
             <div class="navbar__section">
+                <div class="menu-logo">
+                <img src="./media/images/svg-gobbler.svg" alt="" width="24" height="24" loading="eager" ><!--responive possition-->
+                     </div>
                 <div class="navbar__logo">
                     <img src="./media/images/logo.png" alt="snapp logo">
                 </div>
@@ -99,12 +102,15 @@
             <a href=""> <button type="submit" class="hero__section_gotowebapp">ورود به وب اپلیکیشن
                     اسنپ</button><!--button 2-->
             </a>
+            <a href=""> <button type="submit" class="hero__section_downloadapp">دانلود اپلیکیشن
+                    اسنپ</button><!--button 3-->
+            </a>
         </div>
         <div class="hero__section__pic"></div>
     </div>
 
     <!--*****SNAPP APPS   SECTION******-->
-    <div>
+    <div class="snapp-apps-links-section" ><!--i added the class at responsive part-->
         <div class="container"><!--یک کلاس عرضی جدید ولی نمیتوانیم به این استایل بدهیم-->
             <div class="snapp-apps">
                 <!--becuse the width of pics are similar we can style it with (width img property) in here(index.html)-->
@@ -382,6 +388,7 @@
 
 
     <div class="snapp-answer-needs">
+
         <!--در اینجا اگر کلاس کانتینر اضافه کنیم نوشته هامون استیل نمیگیرن-->
         <div class="snapp-answer-needs-pic"></div>
         <div class="snapp-answer-needs-text">
@@ -394,36 +401,36 @@
         </div>
 
 
-        <div class="snaap-benefits">
+        <div class="snapp-benefits">
             <div class="container">
-                <div class="snaap-benefits__items">
+                <div class="snapp-benefits__items">
 
-                    <div class="snaap-benefits-item">
-                        <div class="snaap-benefits-item-cover"><!--برای بکگراند و تصاویر-->
+                    <div class="snapp-benefits-item">
+                        <div class="snapp-benefits-item-cover"><!--برای بکگراند و تصاویر-->
                             <img src="./media/images/210x190-easy.png" alt="" height="190">
                         </div>
-                        <h3 class="snaap-benefits-item-title">آسان</h3>
-                        <p class="snaap-benefits-item-description">برای استفاده از هر کدام از خدمات سوپر‌اپ اسنپ کافی
+                        <h3 class="snapp-benefits-item-title">آسان</h3>
+                        <p class="snapp-benefits-item-description">برای استفاده از هر کدام از خدمات سوپر‌اپ اسنپ کافی
                             است وارد اپلیکیشن اسنپ شوید و روی آیکون مورد نظر بزنید.</p>
                     </div>
 
-                    <div class="snaap-benefits-item">
-                        <div class="snaap-benefits-item-cover"><!--برای بکگراند و تصاویر-->
+                    <div class="snapp-benefits-item">
+                        <div class="snapp-benefits-item-cover"><!--برای بکگراند و تصاویر-->
                             <img src="./media/images/210x190-fast.png" alt="" height="190">
                         </div>
 
-                        <h3 class="snaap-benefits-item-title">سریع</h3>
-                        <p class="snaap-benefits-item-description">قرار گرفتن خدمات مختلف در یک پلت‌فرم به صرفه‌جویی در
+                        <h3 class="snapp-benefits-item-title">سریع</h3>
+                        <p class="snapp-benefits-item-description">قرار گرفتن خدمات مختلف در یک پلت‌فرم به صرفه‌جویی در
                             زمان کمک می‌کند. سوپراپ اسنپ پاسخی سریع به نیازهای رومزه‌ی شماست.</p>
                     </div>
 
-                    <div class="snaap-benefits-item">
-                        <div class="snaap-benefits-item-cover"><!--برای بکگراند و تصاویر-->
+                    <div class="snapp-benefits-item">
+                        <div class="snapp-benefits-item-cover"><!--برای بکگراند و تصاویر-->
                             <img src="./media/images/210x190-eco.png" alt="" height="190">
                         </div>
 
-                        <h3 class="snaap-benefits-item-title">به صرفه</h3>
-                        <p class="snaap-benefits-item-description">سوپراپ اسنپ علاوه بر زمان در هزینه‌های شما نیز
+                        <h3 class="snapp-benefits-item-title">به صرفه</h3>
+                        <p class="snapp-benefits-item-description">سوپراپ اسنپ علاوه بر زمان در هزینه‌های شما نیز
                             صرفه‌جویی می‌کند تا بهترین خدمات را با قیمتی منطقی دریافت کنید.</p>
                     </div>
 
@@ -469,7 +476,7 @@
                     </div>
                     <div class="apply__section-info-tag">
                         <div class="apply__section-info-tags-icon">
-                            <img src="./media/images/apply__section/180x100-hour.png" alt="">
+                            <img src="./media/images/apply__section/180x100-hour.png" alt="" width="120">
                         </div>
                         <div class="apply__section-info-tags-texts">
                             <h3>ساعت کاری دلخواه</h3>
@@ -480,7 +487,7 @@
                     </div>
                     <div class="apply__section-info-tag">
                         <div class="apply__section-info-tags-icon">
-                            <img src="./media/images/apply__section/180x100-benefits.png" alt="">
+                            <img src="./media/images/apply__section/180x100-benefits.png" alt="" width="120">
                         </div>
                         <div class="apply__section-info-tags-texts">
                             <h3>مزایا و خدمات باشگاه رانندگان</h3>
@@ -490,7 +497,7 @@
                     </div>
                     <div class="apply__section-info-tag">
                         <div class="apply__section-info-tags-icon">
-                            <img src="./media/images/apply__section/180x100-carfix.png" alt="">
+                            <img src="./media/images/apply__section/180x100-carfix.png" alt="" width="120">
                         </div>
                         <div class="apply__section-info-tags-texts">
                             <h3>کار‌فیکس</h3>
@@ -501,7 +508,7 @@
                     </div>
                     <div class="apply__section-info-tag">
                         <div class="apply__section-info-tags-icon">
-                            <img src="./media/images/apply__section/safety.svg" alt="">
+                            <img src="./media/images/apply__section/safety.svg" alt="" width="120">
                         </div>
                         <div class="apply__section-info-tags-texts">
                             <h3>امنیت سفر کاربران راننده در اسنپ</h3>
@@ -512,7 +519,7 @@
                     </div>
                     <div class="apply__section-info-tag">
                         <div class="apply__section-info-tags-icon">
-                            <img src="./media/images/apply__section/support.svg" alt="">
+                            <img src="./media/images/apply__section/support.svg" alt="" width="120">
                         </div>
                         <div class="apply__section-info-tags-texts">
                             <h3>پشتیبانی ۲۴ ساعته و سریع</h3>
@@ -561,10 +568,17 @@
     </footer>
 
 
+
+
+
+
+
+    <!--************ javascript code for Slider Section*************-->
     <script src="./js slider code/keen-slider.js"></script>
     <script>
         var slider = new KeenSlider("#snapp-slider")
     </script>
+
 </body>
 
 </html>
